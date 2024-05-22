@@ -1,0 +1,12 @@
+.footer {
+    display: grid;
+    grid-column: full-start / full-end;
+    background-color: var(--color-primary-blue);
+}
+
+.footer__text {
+    margin-left: 12vw;
+    font-size: var(--font-size-medium);
+    color: var(--color-font-primary);
+    padding-top: 3rem;
+}

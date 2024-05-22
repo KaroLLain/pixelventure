@@ -1,0 +1,62 @@
+.header {
+    display: grid;
+    grid-column: full-start / full-end;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+
+    background: linear-gradient(to left, #4f556bd5 45%, #4f556bda 55%), url("../../assets/img/hero2.JPG");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.header__box {
+    color: var(--color-light-cream);
+    text-shadow: 1.2px 1.5px var(--color-dark-black);
+    display: grid;
+    gap: 2rem;
+    grid-column: 3 / 8;
+    grid-row: 3 / 6;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    align-self: center;
+}
+
+.header__box__text {
+    font-size: var(--font-size-XL);
+    font-weight: 500;
+    animation: movingUp 5s;
+}
+
+.header__box__message {
+    font-size: var(--font-size-2XL);
+    font-weight: 200;
+}
+
+.header__box__message__element--first {
+    margin: 0 2rem;
+    display: flex;
+    gap: 2rem;
+    animation: showup 6.5s;
+}
+
+.header__box__message__element--second {
+    animation: slidein 7s;
+
+}
+
+.header__box__desciption {
+    font-size: var(--font-size-L);
+    font-weight: 200;
+    font-style: italic;
+    animation: movingDown 5s;
+}
+
+
+
+    
+
+
