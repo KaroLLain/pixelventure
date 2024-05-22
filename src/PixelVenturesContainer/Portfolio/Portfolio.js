@@ -75,19 +75,19 @@ export default function Portfolio() {
               Fundacja Praesterno
               <div className="technologies--icons cardTechIcons">
                 <svg className="techIcon cardTechIcon">
-                  <use xlinkHref="/sprite.svg#icon-html5"></use>
-                </svg>
-                <svg className="techIcon cardTechIcon">
                   <use xlinkHref="/sprite.svg#icon-css3"></use>
                 </svg>
                 <svg className="techIcon cardTechIcon">
                   <use xlinkHref="/sprite.svg#icon-sass"></use>
                 </svg>
+                <svg className="techIcon cardTechIcon">
+                  <use xlinkHref="/sprite.svg#icon-javascript"></use>
+                </svg>
               </div>
             </h2>
 
             <div className="faIcons">
-              <a className="cardLink" href="https://github.com/KaroLLain/client">
+              <a className="cardLink" href="https://github.com/KaroLLain/praesterno">
                 <i className="faIcons__item fa fa-github" aria-hidden="true" />
               </a>
               <a className="cardLink" href="https://praesterno.karolain.pl">
