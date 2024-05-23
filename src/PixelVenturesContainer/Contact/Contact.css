@@ -6,70 +6,84 @@
   justify-content: center;
 }
 
-.contact__container {
+.contactContainer {
   /* display: grid;
   grid-template-rows: min-content 1fr; */
   display: flex;
   flex-direction: column;
   width: 50vw;
   color: var(--color-light-cream);
+  padding-bottom: 6rem;
 }
 
-.contact__container__header {
-  padding-bottom: 10vh;
+.contactHeader {
+  padding-bottom: 6rem;
 }
 
-.contact__container__content {
+.contactContent {
   display: flex;
   width: 100%;
 }
 
-.contact__container__content__form {
+.contactContentForm {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 60%;
-  row-gap: 2.5rem;
+  align-items: left;
+  width: 90%;
+  row-gap: 2rem;
 }
 
-.contact__container__content__form__box {
+.contactFormBox {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  width: 70%;
+  gap: 2rem;
+  width: 90%;
 }
 
-.contact__container__content__info {
+.contactInfo {
   width: 30%;
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;
 }
 
-.contact__container__content__info__wrapper {
+.contactInfoWrapper {
   display: flex;
   align-content: center;
   align-items: center;
+  position: relative;
 }
 
-.contact__container__content__info__wrapper__box {
+.contactInfoWrapperBox {
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
+  row-gap: 1.5rem;
 }
 
-.contact__container__content__info__wrapper__box:last-child {
-  row-gap: 2rem;
+.contactInfoWrapperBox::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: 5.3em;
+  background-color: var(--color-hilight-brownOpaque);
 }
 
-.contact__container__content__info--svg {
+.contactInfoWrapperBox:last-child {
+  row-gap: 3rem;
+}
+
+.contactInfoSvg {
   height: 3.5rem;
   width: 3.5rem;
 }
 
 input {
   background-color: var(--color-primary-darkOpaque);
-  color: orange;
+  font-size: var(--font-size-medium);
+  color: var(--color-light-cream);
   font-family: inherit;
   padding: 1rem 1.5rem;
   border-radius: 2rem;
@@ -90,18 +104,18 @@ input:focus:invalid {
 }
 
 input::-webkit-input-placeholder {
-  color: var(--color-font-primary);
+  color: rgba(rgb(248, 248, 248), 0.1);
 }
 
-input__label {
-  font-size: 1.2rem;
-  font-weight: 400;
+/* input__label {
+  font-size: var(--default-font-size);
+  font-weight: 100;
   margin-left: 2rem;
   margin-top: 0.7rem;
   display: block;
   transition: all 0.3s;
-  color: rgba(rgb(248, 248, 248), 0.6);
-}
+  color: rgba(rgb(248, 248, 248), 0.1);
+} */
 
 input__input:placeholder-shown + &__label {
   opacity: 0;
@@ -117,81 +131,26 @@ input__select {
 }
 
 textarea {
-  color: orange;
-  font-family: inherit;
-  padding: 1rem 1.5rem;
   background-color: var(--color-primary-darkOpaque);
+  font-size: var(--font-size-medium);
+  color: var(--color-light-cream);
+  font-family: inherit;
+  height: 18rem;
+  min-height: 18rem;
+  max-height: 28rem;
+  padding: 1rem 1.5rem;
   border: none;
   border-bottom: 3px solid transparent;
   border-radius: 2rem;
 }
-
+/* 
 .contact__box {
   justify-content: center;
   padding-top: 1rem;
-}
-
-.contact__box__btn {
-  justify-self: end;
-  font-size: 1.5rem;
-  background-color: var(--color-primary-blueOpaque);
-  color: var(--color-light-cream);
-}
+} */
 
 
-/* ----------------------------------- */
-
-.wrapper {
-  padding: 1.5rem 2rem;
-  filter: url('#goo');
-}
-
-.button {
-  display: inline-block;
-  text-align: center;
-  background: var(--color-primary-blue);
-  color: var(--color-light-cream);
-  padding: 1.18em 3em 1.03em;
-  line-height: 1;
-  letter-spacing: .25rem;
-  border-radius: 1em;
-  position: relative;
-  min-width: 8.23em;
-  font-size: 1.25rem;
-}
-
-.button:before,
-.button:after {
-  width: 4.4em;
-  height: 2.95em;
-  position: absolute;
-  content: "";
-  display: inline-block;
-  background: var(--color-primary-blue);
-  border-radius: 50%;
-  transition: transform 1s ease;
-  transform: scale(0);
-  z-index: -1;
-}
-
-.button:before {
-  top: -25%;
-  left: 20%;
-}
-
-.button:after {
-  bottom: -25%;
-  right: 20%;
-}
-
-.button:hover:before,
-.button:hover:after {
-  transform: none;
-}
-
-.svgStyle {
-  visibility: hidden; 
-  position: absolute;
-  width: 0;
-  height: 0;
+.firstLineBox {
+  display: flex;
+  gap: 1rem;
 }

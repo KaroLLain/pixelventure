@@ -3,34 +3,35 @@ import React from "react";
 export default function Contact() {
   return (
     <section class="contact" id="contactSection">
-      <div class="contact__container">
-        <h1 class="contact__container__header portfolio__header">
+      <div class="contactContainer">
+        <h1 class="contactHeader portfolioHeader">
           get in touch
         </h1>
-        <div class="contact__container__content">
-          <div class="contact__container__content__form">
+        <div class="contactContent">
+          <div class="contactContentForm">
             <h2 class="h__second">Message me</h2>
-            <form class="contact__container__content__form__box" action="">
-              <input type="text" name="name" placeholder="Name" />
-              <input type="email" name="email" placeholder="Email" />
+            <form class="contactFormBox" action="">
+              <div className="firstLineBox">
+                <input type="text" name="name" placeholder="Name" />
+                <input type="email" name="email" placeholder="Email" />
+              </div>
               <input type="text" name="subject" placeholder="Subject" />
               <textarea
                 name="message"
                 cols="30"
-                rows="4"
+                rows="10"
                 placeholder="Message"
               ></textarea>
-              {/* <div class="btn contact__box">
-                  <a class="contact__box__btn btn__btn btn__btn--small" href="#aboutSection">Contact me</a>
-                </div> */}
 
-              <div class="wrapper contact__box">
+              <div class="wrapper contactBox">
                 <a class="button" href="#aboutSection">
                   Enquire
                 </a>
               </div>
 
-              {/* Filter: https://css-tricks.com/gooey-effect/  */}
+{/* -------------  STYLED BUTTON  ------------- */}
+{/* Filter: https://css-tricks.com/gooey-effect/  */}
+
               <svg className="svgStyle"
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.1"
@@ -55,25 +56,25 @@ export default function Contact() {
             </form>
           </div>
 
-          <div class="contact__container__content__info">
-            <p class="contact__container__content__info--header h__second">
-              Contact info:
+          <div class="contactInfo">
+            <p class="contactInfoHeader h__second">
+              Contact info
             </p>
-            <div class="contact__container__content__info__wrapper">
-              <div class="contact__container__content__info__wrapper__box">
-                <svg class="contact__container__content__info--svg">
+            <div class="contactInfoWrapper">
+              <div class="contactInfoWrapperBox ">
+                <svg class="contactInfoSvg">
                   <use xlinkHref="/sprite.svg#icon-user"></use>
                 </svg>
-                <svg class="contact__container__content__info--svg">
+                <svg class="contactInfoSvg">
                   <use xlinkHref="/sprite.svg#icon-mail"></use>
                 </svg>
               </div>
-              <span></span>
-              <div class="contact__container__content__info__wrapper__box">
-                <div class="contact__container__content__info--name h__third">
+
+              <div class="contactInfoWrapperBox">
+                <div class="contactInfoName h__third">
                   Karolina
                 </div>
-                <div class="contact__container__content__info--email h__third">
+                <div class="contactInfoEmail h__third">
                   karolain@wop.pl
                 </div>
               </div>

@@ -55,7 +55,14 @@
     animation: movingDown 5s;
 }
 
+.btn__header {
+    justify-self: center;
+    align-self: center;
+    grid-column: 6 / 8;
+    grid-row: 6 / 8;
 
+    animation: moveUpSlider 5.8s;
+  }
 
     
 

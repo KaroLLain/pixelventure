@@ -2,6 +2,8 @@
   /* color scheme */
   --color-primary-blue: #4f556b;
   --color-primary-blueOpaque: #4e546acc;
+  --color-primary-blueOpaqueplus: hsla(227, 15%, 36%, 0.431);
+  --color-primary-blueOpaquenext: #291d20b7;
   --color-light-cream: #fff5e9;
   --color-hilight-brown: #d67935;
   --color-hilight-brownOpaque: #d57734da;
@@ -72,7 +74,8 @@ body {
 
 .h__second {
   font-size: var(--font-size-big);
-  font-weight: 200;
+  font-weight: 400;
+  margin-left: 1rem;
 }
 
 .h__third {
@@ -92,11 +95,7 @@ body {
 
 /* buttons */
 
-.btn {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-}
+/* -------------------- FLIPPING BUTTON ----------------------- */
 
 .btnFlip {
   opacity: 1;
@@ -161,131 +160,71 @@ body {
 
   &:before,
   &:after {
-   
     padding: 0 0.5rem;
   }
 }
 
-.btn__header {
-  justify-self: center;
-  align-self: center;
-  grid-column: 6 / 8;
-  grid-row: 6 / 8;
+/* -------------------- BUBBLING BUTTON ----------------------- */
+
+.wrapper {
+  padding: 1.5rem 2rem;
+  filter: url("#goo");
 }
 
-.btn__btn,
-.btn__btn:link,
-.btn__btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-
-  border-radius: 3rem;
-  cursor: pointer;
-
-  position: relative;
-}
-
-.btn__btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem var(--color-shadow);
+.button {
+  font-size: var(--font-size-medium);
   color: var(--color-light-cream);
+  letter-spacing: 0.25rem;
+  line-height: 1;
+  text-align: center;
+  display: inline-block;
+  background: var(--color-primary-blue);
+  padding: 1.28rem 3.8rem 1.13rem;
+  border-radius: 1rem;
+  position: relative;
+  min-width: 8.23rem;
 }
 
-.btn__btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.5);
-  opacity: 0;
-}
-
-.btn__btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 1rem 2rem var(--color-shadow);
-}
-
-.btn__btn::after {
+.button:before,
+.button:after {
+  width: 4.4em;
+  height: 2.95em;
+  position: absolute;
   content: "";
   display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 3rem;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background: var(--color-primary-blue);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+  transform: scale(0);
   z-index: -1;
-  transition: all 0.6s;
 }
 
-.btn__btn--white {
-  background-color: var(--color-primary-blue);
-  font-size: var(--default-font-size);
-  color: var(--color-light-cream);
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border: 0.2rem solid var(--color-primary-blue);
-  border-radius: 3rem;
-  transition: all 0.6s;
+.button:before {
+  top: -25%;
+  left: 20%;
 }
 
-.btn__btn--white::after {
-  background-color: inherit;
+.button:after {
+  bottom: -25%;
+  right: 20%;
 }
 
-.btn__btn--animated {
-  animation: moveInButton 0.8s ease-out 0.75s;
-  animation-fill-mode: backwards;
+.button:hover:before,
+.button:hover:after {
+  transform: none;
 }
 
-.btn__btn--small {
-  background-color: var(--color-primary);
-  font-size: var(--default-font-size);
-  color: var(--color-font-secondary);
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 3rem;
-  transition: all 0.2s;
-}
-
-.btn__btn--small::after {
-  background-color: inherit;
-}
-
-.btn__btn--smallWhite {
+.button:active,
+.button:active:before,
+.button:active:after {
   background-color: var(--color-hilight-brown);
-  font-size: var(--font-size-medium);
-  color: var(--color-dark-black);
-  padding: 1rem 3rem;
-  display: inline-block;
-  border-radius: 3rem;
-  transition: all 0.2s;
 }
 
-.btn__btn--smallWhite::after {
-  box-shadow: 0 1rem 2rem var(--color-shadowLight);
-}
-
-.btn__btn__tab,
-.btn__btn__tab:link,
-.btn__btn__tab:visited {
-  border: none;
-  outline: none;
-  text-decoration: none;
-  cursor: pointer;
-  background-color: transparent;
-  padding: 1.5rem 3rem;
-  position: relative;
-}
-
-.btn__btn__tab:hover {
-  transform: translateY(-0.3rem);
-  text-shadow: 0 1rem 2rem var(--color-shadowLight);
-}
-
-.btn__btn__tab:hover::after {
-  transform: scaleX(1.4) scaleY(1.5);
-  opacity: 0;
-}
-
-.btn__btn__tab:active {
-  transform: translateY(-0.1rem);
+.svgStyle {
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 
 /* animations */
@@ -305,7 +244,12 @@ body {
 @keyframes moveUpSlider {
   0% {
     opacity: 0;
-    transform: translateY(17rem) scaleY(0);
+    transform: translateY(5rem) scaleY(0.6);
+  }
+
+  85% {
+    opacity: 0;
+    transform: translateY(5rem) scaleY(0.7);
   }
 
   100% {
