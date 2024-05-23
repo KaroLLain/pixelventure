@@ -61,7 +61,7 @@ export default function Contact() {
               Contact info
             </p>
             <div class="contactInfoWrapper">
-              <div class="contactInfoWrapperBox ">
+              <div class="contactInfoWrapperBox">
                 <svg class="contactInfoSvg">
                   <use xlinkHref="/sprite.svg#icon-user"></use>
                 </svg>
@@ -75,7 +75,7 @@ export default function Contact() {
                   Karolina
                 </div>
                 <div class="contactInfoEmail h__third">
-                  karolain@wop.pl
+                  info@pixelventure.eu
                 </div>
               </div>
             </div>

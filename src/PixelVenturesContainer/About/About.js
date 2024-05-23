@@ -3,41 +3,44 @@ import profilePhoto from "../../assets/img/portretkopia.jpg";
 
 export default function About() {
   return (
-    <section class="about" id="aboutSection">
+    <section className="about" id="aboutSection">
       <img src={profilePhoto} alt="" class="about__profilePhoto" />
 
-      <div class="about__box">
-        <h3 class="about__box--header">Hello I'm Karolina</h3>
-        <p class="about__box--text">
-          My journey with programming began in 2018.{" "}
-          <span>
-            <br />
-          </span>{" "}
-          At that time I just to change my career path. Driven by couriosity I
-          joined a Java bootcamp. After 5 monts of hard work I decided it was
-          not for me. Lookig back I think, that I choose the wrong language for
-          a beginner, but still it gave me a good foundation. In the meantime
-          I've got really tempting job offer as psychotheraphist, so I decided
-          to pursue it.{" "}
-          <span>
-            <br />
-          </span>
-          In 2021 I decide to try it again. But this time to do it better, I did
-          my research and asked myself what do I really love to do. As a person
-          who loves to create I chose UX/Frontend Developmment direction and I
-          lost my head for it.
-          <span>
-            <br />
-          </span>
-          Since that time, I have shred my time between being a mother and
-          learning. I constantly want to learn and have a lot of passoion and
-          dedication for this.{" "}
-          <span>
-            <br />
-          </span>
-          Designing and creating brings me joy. I'm looking for a job which also
-          will be enjoyable. I am open to both remote and on-site work.
+      <div className="aboutBox">
+        <h3 className="aboutHeader">Hello I'm Karolina</h3>
+        <p className="aboutText">
+          Since March 2022, I've been intensively developing my programming
+          skills, focusing on frontend technologies such as HTML, CSS, SCSS,
+          JavaScript and React. <br/><br/>  Driven by my love for creativity and willing to
+          constantly evolve I made creating websites my new passion. <br/> My
+          aesthetic sense and basic knowledge in UX/UI allows me to
+          design sites, that are not only aesthetically pleasing, but
+          also intuitive and user-friendly.<br/> <br/>  My goal is to build my knowledge and
+          constantly learn new technologies, to create exellent web applications,
+          which are not only beautiful, but also fully responsive and
+          optimized. <br/><br/> I am open to both remote and on-site work.
         </p>
+
+        <div className="linksWrapper">
+          <div className="svgWrapper">
+            <svg height="40" width="150">
+              <rect className="shape" height="40" width="150" />
+            </svg>
+            <div className="text">Download CV</div>
+          </div>
+
+          <div className="faWrapper">
+            <a className="faWrapperItem" href="https://github.com/KaroLLain">
+              <i class="fa fa-github-square" />
+            </a>
+            <a
+              className="faWrapperItem"
+              href="https://www.linkedin.com/in/karolina-knap-65b4a112b/"
+            >
+              <i class="fa fa-linkedin-square" />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

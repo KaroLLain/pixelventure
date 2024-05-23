@@ -21,11 +21,12 @@
   grid-column: 1 / 2;
 }
 
-.about__box {
+.aboutBox {
   display: flex;
   flex-direction: column;
   height: 50rem;
   width: 25vw;
+  gap: 2rem;
   justify-content: center;
   background-position: center;
   background-size: cover;
@@ -33,14 +34,83 @@
   padding-left: 5rem;
   color: var(--color-light-cream);
   font-weight: 400;
+  position: relative;
 }
 
-.about__box--header {
+.aboutHeader {
   font-size: var(--font-size-medium);
-  padding-bottom: 5rem;
 }
 
-.about__box--text {
+.aboutText {
   font-size: var(--font-size-small);
   line-height: 1.4;
 }
+
+.aboutText::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  margin-top: 1rem;
+  height: 2px;
+  width: 90%;
+  background-color: var(--color-hilight-brownOpaque);
+  opacity: .6;
+}
+
+.linksWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* cv btn */
+
+/* @import "compass/css3"; */
+
+
+.faWrapper {
+  font-size: 3rem;
+  height: 4rem;
+  width: 15rem;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: right;
+  gap: 1rem; 
+}
+
+.faWrapperItem {
+  color: var(--color-light-cream);
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.shape {
+  fill: var(--color-semi-transparent);
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: var(--color-hilight-brownOpaque);
+}
+
+.text {
+  color: var(--color-light-cream);
+  font-size: var(--font-size-small);
+  letter-spacing: 2px;
+  line-height: 2rem;
+  position: relative;
+  top: -3rem;
+  left: 2rem;
+}
+
+.svgWrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+
+
+
+
+

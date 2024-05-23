@@ -14,7 +14,7 @@ export default function Portfolio() {
       <div class="card cardEmpty">
           <div class="cardContent">
             <h2 className="cardNameEmpty">
-              In a making
+              In the making
               <div className="technologies--icons cardTechIcons">
                 <svg className="techIcon cardTechIcon">
                   <use xlinkHref="/sprite.svg#icon-html5"></use>
@@ -77,7 +77,7 @@ export default function Portfolio() {
         <div class="card cardEmpty">
           <div class="cardContent">
             <h2 className="cardNameEmpty">
-              In a making
+              In the making
               <div className="technologies--icons cardTechIcons">
                 <svg className="techIcon cardTechIcon">
                   <use xlinkHref="/sprite.svg#icon-html5"></use>
