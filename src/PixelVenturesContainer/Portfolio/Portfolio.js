@@ -1,5 +1,6 @@
 import React from "react";
 import praesterno from "../../assets/img/praesterno.png";
+import "../Portfolio/Portfolio.css"
 
 export default function Portfolio() {
   return (
@@ -11,11 +12,11 @@ export default function Portfolio() {
 
       <div className="portfolio__body">
         
-      <div class="card cardEmpty">
-          <div class="cardContent">
+      <div className="card cardEmpty">
+          <div className="cardContent">
             <h2 className="cardNameEmpty">
               In the making
-              <div className="technologies--icons cardTechIcons">
+              <div className="cardTechIcons">
                 <svg className="techIcon cardTechIcon">
                   <use xlinkHref="/sprite.svg#icon-html5"></use>
                 </svg>
@@ -42,9 +43,9 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div class="card">
+        <div className="card">
           <img className="cardImg" src={praesterno} alt="" />
-          <div class="cardContent">
+          <div className="cardContent">
             <h2 className="cardName">
               Fundacja Praesterno
               <div className="technologies--icons cardTechIcons">
@@ -74,8 +75,8 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div class="card cardEmpty">
-          <div class="cardContent">
+        <div className="card cardEmpty">
+          <div className="cardContent">
             <h2 className="cardNameEmpty">
               In the making
               <div className="technologies--icons cardTechIcons">

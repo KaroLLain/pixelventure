@@ -1,36 +1,31 @@
 .about {
-  display: grid;
-
   grid-column: full-start / full-end;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   height: 100vh;
   background: linear-gradient(to left, #402e32cc 45%, #402e32cc 55%),
     url("../../assets/img/stones.jpg");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+  align-items: center;
   justify-content: center;
-  align-content: center;
 }
 
-.about__profilePhoto {
-  height: 50vh;
+.aboutPictureWrapper {
   display: grid;
-  align-self: center;
-  justify-self: right;
-  grid-column: 1 / 2;
+}
+
+.aboutProfilePhoto {
+  height: 45rem;
 }
 
 .aboutBox {
   display: flex;
   flex-direction: column;
   height: 50rem;
-  width: 25vw;
+  width: 35%;
   gap: 2rem;
   justify-content: center;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   padding-left: 5rem;
   color: var(--color-light-cream);
   font-weight: 400;
@@ -38,12 +33,13 @@
 }
 
 .aboutHeader {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-big);
 }
 
 .aboutText {
-  font-size: var(--font-size-small);
-  line-height: 1.4;
+  text-align: justify;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 .aboutText::after {
@@ -54,7 +50,7 @@
   height: 2px;
   width: 90%;
   background-color: var(--color-hilight-brownOpaque);
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .linksWrapper {
@@ -62,11 +58,9 @@
   justify-content: space-between;
 }
 
-
 /* cv btn */
 
 /* @import "compass/css3"; */
-
 
 .faWrapper {
   font-size: 3rem;
@@ -76,15 +70,21 @@
   cursor: pointer;
   display: flex;
   justify-content: right;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 .faWrapperItem {
   color: var(--color-light-cream);
 
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
+}
+
+.svgWrapper {
+  height: 4rem;
+  width: 15rem;
+  cursor: pointer;
 }
 
 .shape {
@@ -102,7 +102,7 @@
   line-height: 2rem;
   position: relative;
   top: -3rem;
-  left: 2rem;
+  left: 3.5rem;
 }
 
 .svgWrapper:hover .shape {
@@ -111,6 +111,53 @@
 }
 
 
+/* media queries */
 
+@media screen and (max-width: 1400px) {
+  .aboutBox {
+    width: 50%;
+  }
+}
 
+@media screen and (max-width: 1205px) {
+  .aboutBox {
+    width: 55%;
+    margin-top: 0;
+    padding-left: 3.5rem;
+  }
+}
 
+@media screen and (max-width: 970px) {
+  .headerText {
+    font-size: var(--font-size-XL);
+  }
+  .headerMessage {
+    font-size: var(--font-size-M);
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .about {
+    height: 100%;
+    padding-bottom: 5rem;
+    flex-direction: column;
+    .aboutBox {
+      width: 80%;
+    }
+  }
+
+  .aboutProfilePhoto {
+    height: 30rem;
+  }
+
+  .aboutBox {
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+    justify-content: center;
+    padding-left: 0;
+    color: var(--color-light-cream);
+    font-weight: 400;
+    position: relative;
+  }
+}

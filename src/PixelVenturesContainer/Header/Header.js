@@ -1,18 +1,31 @@
-import React from 'react';
+import React from "react";
+import "../Header/Header.css";
 
 export default function Header() {
-    return (
-        <header class="header" id="home">
-            <div class="header__box">
-                <h1 class="header__box__message">
-                    <span class="header__box__message__element--first">MOODY <span class="muscle">DESIGN</span> MIXED</span>
-                    <span class="header__box__message__element--second">WITH <span class="muscle">TECHNOLOGY</span></span>
-                </h1>
-            <div class="header__box__desciption">for the love of <span class="muscle">creativity</span></div>
-            </div>
+  return (
+    <header className="header" id="home">
+      <div className="headerBox">
+        <h1 className="headerText">
+          <span className="headerText--first">
+            MOODY <span className="muscle">DESIGN</span> MIXED
+          </span>
+          <span className="headerText--second">
+            WITH <span className="muscle">TECHNOLOGY</span>
+          </span>
+        </h1>
+        <div className="headerMessage">
+          for the love of <span className="muscle">creativity</span>
+        </div>
+      </div>
 
-            <a href="#portfolioSection" class="btn__header btnFlip" data-back="Or just hire me!" data-front="Discover more"> </a>
-
-        </header>
-    )
+      <a
+        href="#portfolioSection"
+        className="btn__header btnFlip"
+        data-back="Or just hire me!"
+        data-front="Discover more"
+      >
+        {" "}
+      </a>
+    </header>
+  );
 }

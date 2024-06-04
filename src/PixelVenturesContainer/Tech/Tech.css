@@ -4,7 +4,7 @@
     background-color: var(--color-primary-blue);
 }
 
-.technologies--icons {
+.technologiesWrapper {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -23,3 +23,46 @@
     font-size: 2rem;
     color: var(--color-font-primary);
 }
+
+/* media queries */
+
+@media screen and (max-width: 610px) {
+
+    .technologiesWrapper{
+        gap: 1rem;
+    }
+    .techIcon {
+        height: 4rem;
+        width: 4rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .technologiesWrapper{
+        gap: .5rem;
+
+        .spaceDecorator {
+            display: none;
+        }
+    }
+    
+  }
+
+  /* @media screen and (max-width: 440px) {
+
+    .technologiesWrapper{
+        gap: .5rem;
+
+        .spaceDecorator {
+            display: none;
+        }
+    }
+    
+  } */
+
+  @media screen and (max-width: 340px) {
+    .technologiesWrapper{
+        gap: .1rem;
+    }
+  }

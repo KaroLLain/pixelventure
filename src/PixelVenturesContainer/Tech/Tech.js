@@ -1,10 +1,10 @@
 import React from 'react';
-
+import '../Tech/Tech.css'
 
 export default function Tech() {
     return (
-        <section class="technologies">
-        <div class="technologies--icons">
+        <section className="technologies">
+        <div className="technologiesWrapper">
           <svg className='techIcon'>
             <use xlinkHref="/sprite.svg#icon-html5"></use>
           </svg>

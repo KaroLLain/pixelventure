@@ -1,16 +1,17 @@
 import React from "react";
+import '../Contact/Contact.css';
 
 export default function Contact() {
   return (
-    <section class="contact" id="contactSection">
-      <div class="contactContainer">
-        <h1 class="contactHeader portfolioHeader">
+    <section className="contact" id="contactSection">
+      <div className="contactContainer">
+        <h1 className="contactHeader portfolioHeader">
           get in touch
         </h1>
-        <div class="contactContent">
-          <div class="contactContentForm">
-            <h2 class="h__second">Message me</h2>
-            <form class="contactFormBox" action="">
+        <div className="contactContent">
+          <div className="contactContentForm">
+            <h2 className="h__second">Message me</h2>
+            <form className="contactFormBox" action="">
               <div className="firstLineBox">
                 <input type="text" name="name" placeholder="Name" />
                 <input type="email" name="email" placeholder="Email" />
@@ -23,8 +24,8 @@ export default function Contact() {
                 placeholder="Message"
               ></textarea>
 
-              <div class="wrapper contactBox">
-                <a class="button" href="#aboutSection">
+              <div className="wrapper contactBox">
+                <a className="button" href="#a">
                   Enquire
                 </a>
               </div>
@@ -56,25 +57,25 @@ export default function Contact() {
             </form>
           </div>
 
-          <div class="contactInfo">
-            <p class="contactInfoHeader h__second">
+          <div className="contactInfo">
+            <p className="contactInfoHeader h__second">
               Contact info
             </p>
-            <div class="contactInfoWrapper">
-              <div class="contactInfoWrapperBox">
-                <svg class="contactInfoSvg">
+            <div className="contactInfoWrapper">
+              <div className="contactInfoWrapperBox">
+                <svg className="contactInfoSvg">
                   <use xlinkHref="/sprite.svg#icon-user"></use>
                 </svg>
-                <svg class="contactInfoSvg">
+                <svg className="contactInfoSvg">
                   <use xlinkHref="/sprite.svg#icon-mail"></use>
                 </svg>
               </div>
 
-              <div class="contactInfoWrapperBox">
-                <div class="contactInfoName h__third">
+              <div className="contactInfoWrapperBox">
+                <div className="contactInfoName h__third">
                   Karolina
                 </div>
-                <div class="contactInfoEmail h__third">
+                <div className="contactInfoEmail h__third">
                   info@pixelventure.eu
                 </div>
               </div>

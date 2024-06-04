@@ -1,36 +1,30 @@
 .portfolio {
-  display: grid;
   grid-column: full-start / full-end;
-  grid-template-columns: minmax(6rem, 1fr) repeat(3, max-content) minmax(
-      6rem,
-      1fr
-    );
-  grid-template-rows: repeat(3, min-content);
-  align-content: center;
+  height: 100vh;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 7rem;
   background-color: var(--color-dark-black);
 }
 
 .portfolioHeader {
-  display: grid;
-  grid-row: 1 / 2;
-  grid-column: 3 / 4;
   color: var(--color-hilight-brown);
   letter-spacing: 0.3rem;
   font-size: var(--font-size-XL);
-  font-weight: 300;
+  font-weight: 400;
   align-self: start;
   justify-self: center;
   align-self: center;
 }
 
 .portfolio__body {
-  width: 100%;
-  grid-row: 2 / 3;
-  grid-column: 2 / 5;
   justify-content: center;
   display: flex;
   gap: 5rem;
+  padding-bottom: 5rem;
 }
 
 .portfolioBtn {
@@ -54,7 +48,7 @@
   position: relative;
   color: var(--color-light-cream);
   box-shadow: 1px var(--color-dark-black);
-  transition: 2s ease;
+  transition: 0.5s ease;
 
   .cardImg {
     position: absolute;
@@ -69,14 +63,15 @@
 
   &:hover .cardImg {
     transition: opacity cubic-bezier(0.93, 0.19, 0.44, 0.98) ease-in;
-    
-    filter: blur(5px) saturate(0.2) brightness(0.3) opacity(.35);
+
+    filter: blur(5px) saturate(0.2) brightness(0.3) opacity(0.35);
     opacity: 1;
   }
 
   .cardName {
     position: absolute;
     /* width: 100%; */
+    display: grid;
     color: var(--color-light-cream);
     font-size: var(--font-size-big);
     font-weight: 500;
@@ -87,6 +82,7 @@
   .cardTechIcons {
     /* opacity: 1; */
     transform: scale(0.6);
+    display: flex;
     justify-self: center;
   }
 
@@ -119,7 +115,7 @@
     justify-self: center;
 
     opacity: 0;
-    inset: auto auto 40px auto;
+    inset: auto auto 4rem auto;
   }
 
   &:hover .cardName {
@@ -128,6 +124,7 @@
   }
 
   &:hover .cardTechIcons {
+    justify-self: center;
     opacity: 0;
     transition: 0.01s ease-out;
   }
@@ -153,24 +150,108 @@
     font-weight: 100;
     display: flex;
     flex-direction: column;
-    inset: auto auto 4rem 1rem;
+    inset: auto auto 4rem 5rem;
     transition: inset 0.3s ease-out;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
   }
 
   &:hover .cardNameEmpty {
-    inset: auto auto 6rem 1rem;
+    inset: auto auto 6rem 5rem;
     transition: inset 0.2s ease-out;
   }
-
 }
 
 .cardEmpty {
   background-color: var(--color-primary-blueOpaqueplus);
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 
   &:hover {
     background-color: var(--color-primary-blueOpaquenext);
+  }
+}
+
+/* media queries */
+
+@media screen and (max-width: 1205px) {
+  .portfolio {
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 1205px) {
+
+  .portfolio__body {
+    gap: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .card {
+    height: 35rem;
+    width: 30rem;
+
+    .cardName {
+      justify-self: center;
+      inset: auto auto 4rem 3rem;
+    }
+    &:hover .cardName {
+      inset: auto auto 6rem 3rem;
+    }
+
+    .cardNameEmpty {
+      inset: auto 1.5rem 4rem 1rem;
+    }
+    &:hover .cardNameEmpty {
+      inset: auto 1.5rem 6rem 1rem;
+    }
+  }
+
+  
+}
+
+@media screen and (max-width: 970px) {
+
+  .portfolio {
+    height: auto;
+    padding: 10rem 0 5rem;
+  }
+
+  .portfolio__body {
+    gap: 5rem;
+    flex-direction: column;
+  }
+
+  .card {
+    height: 40rem;
+    width: 35rem;
+
+    .cardName {
+      inset: auto auto 4rem 5rem;
+    }
+
+    &:hover .cardName {
+      inset: auto auto 6rem 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .portfolioHeader {
+    font-size: var(--font-size-L);
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .card {
+    height: 32rem;
+    width: 27rem;
+    display: grid;
+    .cardName {
+      justify-self: center;
+      inset: auto auto 4rem 1rem;
+    }
+    &:hover .cardName {
+      inset: auto auto 6rem 1rem;
+    }
   }
 }
