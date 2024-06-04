@@ -1,3 +1,4 @@
+import './index.css';
 import Nav from './PixelVenturesContainer/Nav/Nav';
 import Header from './PixelVenturesContainer/Header/Header';
 import Tech from './PixelVenturesContainer/Tech/Tech';
