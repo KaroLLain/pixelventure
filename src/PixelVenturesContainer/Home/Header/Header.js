@@ -1,6 +1,5 @@
 import React from "react";
-import "../Header/Header.css";
-
+import "./Header.css";
 export default function Header() {
   return (
     <header className="header" id="home">

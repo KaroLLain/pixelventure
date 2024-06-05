@@ -69,7 +69,7 @@ body {
   line-height: 0.9;
 }
 
-.app {
+/* .app {
   display: grid;
   grid-template-rows: 73vh 7vh repeat(2, max-content) 90vh 10vh;
   grid-template-columns:
@@ -78,7 +78,7 @@ body {
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end] minmax(6rem, 1fr) [full-end];
-}
+} */
 
 /* typography */
 
@@ -96,6 +96,10 @@ body {
 .muscle {
   font-weight: 500;
   color: var(--color-hilight-brownOpaque);
+}
+
+.show{
+  animation: movingUp 1s ease-out;
 }
 
 /* buttons */
@@ -236,13 +240,13 @@ body {
 
 @keyframes movingUp {
   0% {
-    opacity: 0;
-    transform: translateY(8rem);
+    visibility: hidden;
+    opacity: 0
   }
 
-  60% {
-    opacity: 0;
-    transform: translateY(8rem);
+  100% {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -353,20 +357,6 @@ font-size: var(--font-size-medium);
     font-size: 30%;
 } */
 
-
-@media screen and (max-width: 970px) {
-
-  .app {
-    display: grid;
-    grid-template-rows: 73vh 7vh min-content max-content 100vh 10vh;
-    grid-template-columns:
-      [full-start] minmax(6rem, 1fr) [center-start] repeat(
-        6,
-        [col-start] minmax(min-content, 14rem) [col-end]
-      )
-      [center-end] minmax(6rem, 1fr) [full-end];
-  }
-}
 
 @media screen and (max-width: 510px) {
   .btnFlip {

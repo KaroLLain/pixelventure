@@ -1,10 +1,14 @@
 import React from "react";
-import '../Contact/Contact.css';
+import './Contact.css';
+import { useRef, useEffect, useState } from "react";
+import { useInView } from 'react-intersection-observer';
 
 export default function Contact() {
+  const { ref: myRef, inView: fadeInSection} = useInView();
+
   return (
-    <section className="contact" id="contactSection">
-      <div className="contactContainer">
+    <section ref={myRef} className="contact" id="contactSection">
+      <div className={`${"contactContainer"} ${fadeInSection ? "show" : ''}`}>
         <h1 className="contactHeader portfolioHeader">
           get in touch
         </h1>

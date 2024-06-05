@@ -38,7 +38,7 @@
 }
 
 .contactInfo {
-  width: 30%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -178,8 +178,13 @@ textarea {
 
 @media screen and (max-width: 970px) {
 
+  .contact {
+    height: auto;
+    padding: 10rem 0;
+  }
+
   /* .contactContainer {
-    height: 100vh;
+    height: 100%;
   } */
 
   .contactContent {

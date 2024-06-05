@@ -1,20 +1,23 @@
 import React from "react";
-import profilePhoto from "../../assets/img/portretkopia.jpg";
-import profilePhotoRound from "../../assets/img/portretkopiaround.png";
-import '../About/About.css';
+import profilePhoto from "../../../assets/img/portretkopia.jpg";
+import profilePhotoRound from "../../../assets/img/portretkopiaround.png";
+import { useRef, useEffect, useState } from "react";
+import { useInView } from 'react-intersection-observer';
+import './About.css';
 
 export default function About() {
-  return (
-    <section className="about" id="aboutSection">
-      {/* <div className="aboutWrapper"> */}
+  const { ref: myRef, inView: fadeInSection} = useInView();
 
-      <picture className="aboutPictureWrapper">
+  return (
+    <section ref={myRef} className="about fade-in" id="aboutSection">
+
+      <picture className={`${"aboutPictureWrapper"} ${fadeInSection ? "show" : ''}`} >
         <source media="(min-width: 891px)" srcSet={profilePhoto}/>
           <img src={profilePhotoRound} alt="" className="aboutProfilePhoto" />
         </picture>
         
   
-        <div className="aboutBox">
+        <div className={`${"aboutBox"} ${fadeInSection ? "show" : ''}`}>
           <h3 className="aboutHeader"><span className="muscle">Hello</span> I'm Karolina</h3>
           <p className="aboutText">
             It's been quite a journey since I first delved into the world of
@@ -52,7 +55,6 @@ export default function About() {
             </div>
           </div>
         </div>
-      {/* </div> */}
     </section>
   );
 }

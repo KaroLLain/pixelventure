@@ -5,7 +5,7 @@
   grid-template-columns: repeat(12, 1fr);
 
   background: linear-gradient(to left, #4f556bd5 45%, #4f556bda 55%),
-    url("../../assets/img/hero2.JPG");
+    url("../../../assets/img/hero2.JPG");
 
   background-position: center;
   background-size: cover;

@@ -3,7 +3,7 @@
   display: flex;
   height: 100vh;
   background: linear-gradient(to left, #402e32cc 45%, #402e32cc 55%),
-    url("../../assets/img/stones.jpg");
+    url("../../../assets/img/stones.jpg");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,18 +1,22 @@
-import React from "react";
-import praesterno from "../../assets/img/praesterno.png";
-import "../Portfolio/Portfolio.css"
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useRef, useEffect, useState } from "react";
+import praesterno from "../../../assets/img/praesterno.png";
+import "./Portfolio.css";
 
 export default function Portfolio() {
+  const { ref: myRef, inView: fadeInSection} = useInView();
+
   return (
-    <section className="portfolio" id="portfolioSection">
-      <h1 className="portfolioHeader">portfolio</h1>
+
+    <section ref={myRef}  className="portfolio" id="portfolioSection">
+      <h1 className={`${"portfolioHeader"} ${fadeInSection ? "show" : ''}`}>portfolio</h1>
       {/* <div class="btn">
           <a class="btn__btn portfolio__header btn__btn--white btn__btn--animated" href="#portfolioSection">Discover more</a>
         </div>  */}
 
-      <div className="portfolio__body">
-        
-      <div className="card cardEmpty">
+      <div className={`${"portfolio__body"} ${fadeInSection ? "show" : ''}`}>
+        <div className="card cardEmpty">
           <div className="cardContent">
             <h2 className="cardNameEmpty">
               In the making
@@ -105,7 +109,6 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

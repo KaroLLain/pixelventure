@@ -13,8 +13,10 @@
 .portfolioHeader {
   color: var(--color-hilight-brown);
   letter-spacing: 0.3rem;
-  font-size: var(--font-size-XL);
-  font-weight: 400;
+  font-size: var(--font-size-L);
+  font-weight: 500;
+  text-decoration: underline 2px;
+  padding-bottom: 2rem;
   align-self: start;
   justify-self: center;
   align-self: center;
