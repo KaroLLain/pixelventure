@@ -8,11 +8,11 @@ export default function Contact() {
 
   return (
     <section ref={myRef} className="contact" id="contactSection">
-      <div className={`${"contactContainer"} ${fadeInSection ? "show" : ''}`}>
-        <h1 className="contactHeader portfolioHeader">
+      {/* <div className={`${"contactContainer"} ${fadeInSection ? "show" : ''}`}> */}
+        <h1 className={`${"contactHeader"} ${"portfolioHeader"} ${fadeInSection ? "show" : ''}`}>
           get in touch
         </h1>
-        <div className="contactContent">
+        <div className={`${"contactContent"} ${fadeInSection ? "show" : ''}`}>
           <div className="contactContentForm">
             <h2 className="h__second">Message me</h2>
             <form className="contactFormBox" action="">
@@ -86,7 +86,6 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }

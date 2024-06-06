@@ -85,6 +85,10 @@
 }
 
 @media screen and (max-width: 1150px) {
+  .header {
+    background-position: right 40% bottom 50%;
+  }
+  
   .headerBox {
     padding-left: 5rem;
     .headerText {
