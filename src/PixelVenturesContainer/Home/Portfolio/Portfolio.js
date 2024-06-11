@@ -9,12 +9,15 @@ export default function Portfolio() {
 
   return (
 
-    <section ref={myRef}  className="portfolio" id="portfolioSection">
-      <h1 className={`${"portfolioHeader"} ${fadeInSection ? "show" : ''}`}>portfolio</h1>
+    <section  className="portfolio" id="portfolioSection">
+      <div></div>
+      <div className='porfolioWrapper' ref={myRef}>
+      <h1 className={`${fadeInSection ? "show" && "portfolioHeader" : ''}`}>portfolio</h1>
       {/* <div class="btn">
           <a class="btn__btn portfolio__header btn__btn--white btn__btn--animated" href="#portfolioSection">Discover more</a>
-        </div>  */}
+          </div>  */}
 
+      <div className={`${"underlining"} ${fadeInSection ? "show" : ''}`}><span className='dot'></span></div>
       <div className={`${"portfolio__body"} ${fadeInSection ? "show" : ''}`}>
         <div className="card cardEmpty">
           <div className="cardContent">
@@ -109,6 +112,7 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

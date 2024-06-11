@@ -93,13 +93,34 @@ body {
   font-weight: 200;
 }
 
+.underlining {
+  position: relative;
+  width: 10rem;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: var(--color-primary-blueOpaque);
+  overflow: hidden;
+  
+}
+
+.dot {
+  position: absolute;
+  height: 10px;
+  left: 5px;
+  width: 1rem;
+  background-color: var(--color-dark-black);
+  border: 1.5px solid var(--color-dark-black);
+  animation: movingDot 3s linear infinite;
+}
+
+
 .muscle {
   font-weight: 500;
   color: var(--color-hilight-brownOpaque);
 }
 
 .show{
-  animation: movingUp 1s ease-out;
+  animation: movingUp .5s ease;
 }
 
 /* buttons */
@@ -192,6 +213,7 @@ body {
   border-radius: 1rem;
   position: relative;
   min-width: 8.23rem;
+  border: none;
 }
 
 .button:before,
@@ -241,11 +263,13 @@ body {
 @keyframes movingUp {
   0% {
     visibility: hidden;
+    transform: translateY(8rem);
     opacity: 0
   }
 
   100% {
     visibility: visible;
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -329,6 +353,16 @@ body {
     stroke-width: 2px;
   }
 }
+
+@keyframes movingDot {
+  0% {
+    left: -2rem;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
 
 /* -------------- Media queries --------------- */
 

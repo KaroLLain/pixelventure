@@ -1,13 +1,29 @@
 .portfolio {
   grid-column: full-start / full-end;
-  height: 100vh;
-  padding-top: 5rem;
+  padding: 20rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   row-gap: 7rem;
   background-color: var(--color-dark-black);
+  /* background: linear-gradient(to left, #402e32cc 45%, #402e32cc 55%),
+    url("../../../assets/img/stones.jpg");
+    background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+ */
+}
+
+/* h1 {
+  color: transparent;
+} */
+
+.porfolioWrapper{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 
 .portfolioHeader {
@@ -15,18 +31,18 @@
   letter-spacing: 0.3rem;
   font-size: var(--font-size-L);
   font-weight: 500;
-  text-decoration: underline 2px;
-  padding-bottom: 2rem;
   align-self: start;
   justify-self: center;
   align-self: center;
+  animation: movingUp .5s ease;
+  padding-bottom: 1.5rem;
 }
 
 .portfolio__body {
   justify-content: center;
   display: flex;
   gap: 5rem;
-  padding-bottom: 5rem;
+  padding: 7rem 0;
 }
 
 .portfolioBtn {
@@ -177,7 +193,7 @@
 
 @media screen and (max-width: 1205px) {
   .portfolio {
-    height: 90vh;
+    /* height: 90vh; */
   }
 }
 

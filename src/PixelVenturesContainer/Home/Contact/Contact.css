@@ -1,13 +1,13 @@
 .contact {
   grid-column: full-start / full-end;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: var(--color-dark-black);
   color: var(--color-light-cream);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 5rem;
-  padding: 2rem 4rem;
+  align-items: center;
+  padding: 0 4rem;
 }
 
 
@@ -16,6 +16,7 @@
   display: flex;
   justify-content: center;
   gap: 3rem;
+  padding-top: 7rem;
 }
 
 .contactContentForm {
@@ -169,7 +170,7 @@ textarea {
 @media screen and (max-width: 970px) {
 
   .contact {
-    height: auto;
+    /* height: auto; */
     padding: 10rem 2rem;
   }
 

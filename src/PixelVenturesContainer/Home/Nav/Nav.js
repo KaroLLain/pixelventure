@@ -1,31 +1,27 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { fallDown as Menu } from "react-burger-menu";
 import logo from "../../../assets/img/LogoPV2.png";
 import "./Nav.css";
 
 export default function Nav() {
-  // to change burger classes
-  const [burgerClass, setBurgerClass] = useState("burgerBar unclicked");
-  const [menuClass, setMenuClass] = useState("menu hidden");
-  const [isMenuClicked, setIsMenuCilcked] = useState(false);
+  const [isMenuOpen, handleMenu] = useState(false);
+  const handleCloseMenu = () => {
+    handleMenu(false);
+  };
+  const handleStateChange = (state) => {
+    handleMenu(state.isOpen);
+  };
 
-  // toggle burger menu change
-  const updateMenu = ()=> {
-    if(!isMenuClicked) {
-      setBurgerClass("burgerBar clicked")
-      setMenuClass("menu visible")
-    } else {
-      setBurgerClass("burgerBar unclicked")
-      setMenuClass("menu hidden")
-    }
-    setIsMenuCilcked(!isMenuClicked);
-  }
-  
   return (
     <nav className="nav">
       <div className="navWrapper">
         <div className="logoWrapper">
           <a href="#home" className="nav__list__link">
-                  <img src={logo} alt="logo Karolina" className="nav__list__link--img" />
+            <img
+              src={logo}
+              alt="logo Karolina"
+              className="nav__list__link--img"
+            />
           </a>
         </div>
         <div className="linkWrapper">
@@ -60,9 +56,25 @@ export default function Nav() {
       </div>
 
       <div className="navBurgerContainer">
-      
+        <Menu
+          pageWrapId={"page-wrap"}
+          isOpen={isMenuOpen}
+          onStateChange={handleStateChange}
+        >
+          <a onClick={() => handleCloseMenu()} href="#home">
+            HOME
+          </a>
+          <a onClick={() => handleCloseMenu()} href="#portfolioSection">
+            WORK
+          </a>
+          <a onClick={() => handleCloseMenu()} href="#aboutSection">
+            ABOUT
+          </a>
+          <a onClick={() => handleCloseMenu()} href="#contactSection">
+            CONTACT
+          </a>
+        </Menu>
       </div>
     </nav>
-
   );
 }

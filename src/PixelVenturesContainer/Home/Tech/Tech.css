@@ -5,6 +5,7 @@
 }
 
 .technologiesWrapper {
+    height: 7vh;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -23,6 +24,8 @@
     font-size: 2rem;
     color: var(--color-font-primary);
 }
+
+
 
 /* media queries */
 

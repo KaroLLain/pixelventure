@@ -1,6 +1,6 @@
 .homeContainer {
   display: grid;
-  grid-template-rows: 73vh 7vh repeat(2, max-content) 90vh 10vh;
+  grid-template-rows: 78vh 7vh max-content repeat(2, 1fr) 10vh;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
       6,
@@ -13,14 +13,14 @@
 
 @media screen and (max-width: 1050px) {
   .homeContainer {
-    grid-template-rows: 73vh 7vh repeat(3, max-content) 10vh;
+    grid-template-rows: 74vh 7vh 1fr repeat(2, max-content) 10vh;
   }
 }
 
 @media screen and (max-width: 970px) {
   .homeContainer {
     display: grid;
-    grid-template-rows: 73vh 7vh repeat(3, min-content) 10vh;
+    grid-template-rows: 74vh 7vh repeat(3, min-content) 10vh;
     grid-template-columns:
       [full-start] minmax(6rem, 1fr) [center-start] repeat(
         6,
