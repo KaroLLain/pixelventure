@@ -1,5 +1,5 @@
 import "./Contact.css";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useInView } from "react-intersection-observer";
 
@@ -12,7 +12,6 @@ export default function Contact() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [banner, setBanner] = useState("");
-  const [bool, setBool] = useState(false);
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -29,9 +28,8 @@ export default function Contact() {
   const handleMessage = (e) => {
     setMessage(e.target.value);
   };
-  console.log(name);
 
-  const submitForm = async(e) => {
+  const submitForm = async (e) => {
     e.preventDefault();
     try {
       let data = {
@@ -40,16 +38,18 @@ export default function Contact() {
         subject,
         message,
       };
-      setBool(true);
-      const res = await axios.post('/contact', data)
-      if(name.length === 0 || email.length === 0 || message.length === 0) {
-        setBanner(res.data.msg)
-        toast.error(res.data.msg)
-        setBool(false)
-      } else if(res.status === 200) {
-        setBanner(res.data.msg)
-        toast.success(res.data.msg)
-        setBool(false)
+      const res = await axios.post(`http://localhost:3000/contact`, data);
+      if (name.length === 0 || email.length === 0 || subject.length === 0 || message.length === 0) {
+        setBanner(res.data.msg);
+        toast.error(res.data.msg);
+      } else if (res.status === 200) {
+        setBanner(res.data.msg);
+        toast.success(res.data.msg);
+
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
       }
     } catch (error) {
       console.log(error);
@@ -72,7 +72,8 @@ export default function Contact() {
       <div className={`${"contactContent"} ${fadeInSection ? "show" : ""}`}>
         <div className="contactContentForm">
           <h2 className="h__second">Message me</h2>
-          <form onSubmit={submitForm} className="contactFormBox" action="">
+          <form onSubmit={submitForm} className="contactFormBox">
+            <p>{banner}</p>
             <div className="firstLineBox">
               <input
                 onChange={handleName}
@@ -106,7 +107,7 @@ export default function Contact() {
             ></textarea>
 
             <div className="wrapper contactBox">
-              <button className="button" href="#a">
+              <button className="button" type="submit">
                 Enquire
               </button>
             </div>

@@ -5,9 +5,11 @@ import "./Nav.css";
 
 export default function Nav() {
   const [isMenuOpen, handleMenu] = useState(false);
+
   const handleCloseMenu = () => {
     handleMenu(false);
   };
+
   const handleStateChange = (state) => {
     handleMenu(state.isOpen);
   };
@@ -57,7 +59,6 @@ export default function Nav() {
 
       <div className="navBurgerContainer">
         <Menu
-          pageWrapId={"page-wrap"}
           isOpen={isMenuOpen}
           onStateChange={handleStateChange}
         >
