@@ -24,12 +24,6 @@
   align-self: center;
 }
 
-/* .header__box__text {
-    font-size: var(--font-size-XL);
-    font-weight: 500;
-    animation: movingUp 5s;
-} */
-
 .headerText {
   font-size: var(--font-size-2XL);
   font-weight: 200;

@@ -28,11 +28,6 @@ export default function Nav() {
         </div>
         <div className="linkWrapper">
           <ul className="nav__list">
-            {/* <li className="nav__list__item">
-              <a href="#home" className="nav__list__link">
-                <img src={logo} alt="logo Karolina" className="nav__list__link--img" />
-              </a>
-            </li> */}
             <li className="nav__list__item">
               <a href="#home" className="nav__list__link">
                 HOME

@@ -25,9 +25,6 @@
   margin-bottom: 0;
   justify-content: space-between;
 
-  /* grid-template-columns: minmax(3rem, 12vw) minmax(max-content, 60vw) repeat(4, minmax(max-content, 1fr)) minmax(3rem, 12vw);
-    column-gap: 2rem;
-    align-items: center; */
 }
 
 .nav__list__item {
@@ -97,7 +94,6 @@ button:focus {
   position: relative;
   overflow: hidden;
   top: 6rem;
-  /* z-index: 99 !important; */
 }
 
 .bm-menu {
@@ -134,7 +130,6 @@ button:focus {
 }
 
 .bm-item:hover {
-  /* color: var(--color-primary-blue); */
   opacity: .6;
   cursor: pointer !important;
 }
