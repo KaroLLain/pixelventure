@@ -33,13 +33,12 @@ export default function Contact() {
   const submitForm = async (e) => {
     e.preventDefault();
     try {
-      let data = {
-        name,
-        email,
-        subject,
-        message,
-      };
-      const res = await axios.post(`http://localhost:5000/contact`, data);
+      const res = await axios.post(`http://127.0.0.1:5000/contact`, {
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+      });
       if (name.length === 0 || email.length === 0 || subject.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
@@ -53,9 +52,8 @@ export default function Contact() {
         setMessage("");
       }
     } catch (error) {
-      console.log(error);
+      console.log(error.response);
     }
-
   };
 
 

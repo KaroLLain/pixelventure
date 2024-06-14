@@ -130,6 +130,9 @@
 }
 
 @media screen and (max-width: 970px) {
+  .about{
+    padding: 10rem 0;
+  }
   .headerText {
     font-size: var(--font-size-XL);
   }
@@ -140,8 +143,8 @@
 
 @media screen and (max-width: 890px) {
   .about {
-    height: 100%;
-    padding-bottom: 5rem;
+    /* height: 100%; */
+    padding: 5rem 0;
     flex-direction: column;
     .aboutBox {
       width: 80%;

@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 1050px) {
   .homeContainer {
-    grid-template-rows: 74vh 7vh 1fr repeat(2, max-content) 10vh;
+    grid-template-rows: 74vh 7vh 1fr max-content 1fr 10vh;
   }
 }
 

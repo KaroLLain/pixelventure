@@ -154,17 +154,15 @@ textarea {
 /* media queries */
 
 @media screen and (max-width: 1400px) {
-  /* .contact {
-    padding: 5rem 0;
-  } */
-  /* .contactContainer {
-
-    width: 90vw;
-  } */
+  .contact {
+    padding: 0rems;
+  }
 }
 
 @media screen and (max-width: 1205px) {
-
+  .contact {
+    padding: 10rem 2rem;
+  }
 }
 
 @media screen and (max-width: 970px) {
