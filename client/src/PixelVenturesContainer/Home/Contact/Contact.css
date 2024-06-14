@@ -1,13 +1,13 @@
 .contact {
   grid-column: full-start / full-end;
-  /* height: 100vh; */
+  height: auto;
   background-color: var(--color-dark-black);
   color: var(--color-light-cream);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 4rem;
+  padding: 20rem 4rem 20rem;
 }
 
 
@@ -154,27 +154,39 @@ textarea {
 /* media queries */
 
 @media screen and (max-width: 1400px) {
+  /* .contact {
+    padding: 0;
+  } */
+}
+
+@media screen and (max-width: 1280px) {
   .contact {
-    padding: 0rems;
+    padding: 13rem 5rem 5rem;
+  }
+
+  .contactContent {
+    padding-top: 5rem;
   }
 }
 
-@media screen and (max-width: 1205px) {
+@media screen and (max-width: 1204px) {
   .contact {
-    padding: 10rem 2rem;
+    padding: 8rem 6rem;
+  }
+  .contactContent {
+    padding-top: 1rem;
+  }
+
+  .wrapper {
+    padding: 0 1rem;
   }
 }
 
 @media screen and (max-width: 970px) {
 
   .contact {
-    /* height: auto; */
-    padding: 10rem 2rem;
+    padding: 10rem 2rem 5rem;
   }
-
-  /* .contactContainer {
-    height: 100%;
-  } */
 
   .contactContent {
     display: flex;
@@ -194,4 +206,97 @@ textarea {
       }
     }
   }
+}
+
+@media screen and (max-width: 912px) {
+
+  .contact {
+    padding: 10rem 4rem 5rem;
+  }
+}
+
+@media screen and (max-width: 820px) {
+
+  .contact {
+    padding: 10rem 2rem;
+  }
+
+  .contactContent {
+    padding: 7rem 2rem;
+  }
+
+  textarea {
+    height: 19rem;
+    min-height: 19rem;
+    max-height: 28rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactContent {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+
+  .contact {
+    padding: 6rem 1rem 5rem;
+  }
+  .contactContent {
+    padding-top: 3rem;
+    padding-bottom: 0;
+  }
+
+  .portfolioHeader{
+    font-size: 3.5rem;
+  }
+}
+
+
+@media screen and (max-width: 384px) {
+
+  .contact {
+    padding: 6rem 1rem 5rem;
+  }
+
+  .contactContent {
+    padding-top: 2rem;
+  }
+
+  .contactContentForm {
+    gap: 0;
+  }
+
+  .firstLineBox {
+    flex-direction: column;
+  }
+  .portfolioHeader {
+    font-size: 3rem;
+  }
+
+  .h__second{
+    font-size: 2.5rem;
+  }
+
+  textarea {
+    height: 10rem;
+    min-height: 10rem;
+    max-height: 28rem;
+  }
+
+}
+
+
+@media screen and (max-width: 384px) {
+
+  .contact {
+    padding: 6rem 0 5rem;
+  }
+
+  .h__second{
+    font-size: 2.2rem;
+  }
+
 }

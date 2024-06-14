@@ -10,7 +10,6 @@ export default function Portfolio() {
   return (
 
     <section  className="portfolio" id="portfolioSection">
-      <div></div>
       <div className='porfolioWrapper' ref={myRef}>
       <h1 className={`${fadeInSection ? "show" && "portfolioHeader" : ''}`}>portfolio</h1>
       {/* <div class="btn">

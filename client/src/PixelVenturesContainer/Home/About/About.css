@@ -121,6 +121,22 @@
   }
 }
 
+@media screen and (max-width: 1280px) {
+  .about {
+    padding: 15rem 5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    padding: 10rem 3rem;
+  }
+
+  .aboutProfilePhoto {
+    height: 40rem;
+  }
+}
+
 @media screen and (max-width: 1205px) {
   .aboutBox {
     width: 55%;
@@ -128,6 +144,8 @@
     padding-left: 3.5rem;
   }
 }
+
+
 
 @media screen and (max-width: 970px) {
   .about{
@@ -143,8 +161,6 @@
 
 @media screen and (max-width: 890px) {
   .about {
-    /* height: 100%; */
-    padding: 5rem 0;
     flex-direction: column;
     .aboutBox {
       width: 80%;
@@ -164,5 +180,18 @@
     color: var(--color-light-cream);
     font-weight: 400;
     position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 10rem 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+
+  .about {
+    padding: 5rem 0;
   }
 }

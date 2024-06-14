@@ -1,6 +1,6 @@
 .homeContainer {
   display: grid;
-  grid-template-rows: 78vh 7vh max-content repeat(2, 1fr) 10vh;
+  grid-template-rows: 78vh 7vh max-content 1fr max-content 10vh;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
       6,
