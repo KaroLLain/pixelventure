@@ -103,16 +103,6 @@ input::-webkit-input-placeholder {
   color: rgba(rgb(248, 248, 248), 0.1);
 }
 
-/* input__label {
-  font-size: var(--default-font-size);
-  font-weight: 100;
-  margin-left: 2rem;
-  margin-top: 0.7rem;
-  display: block;
-  transition: all 0.3s;
-  color: rgba(rgb(248, 248, 248), 0.1);
-} */
-
 input__input:placeholder-shown + &__label {
   opacity: 0;
   visibility: hidden;
@@ -139,11 +129,6 @@ textarea {
   border-bottom: 3px solid transparent;
   border-radius: 2rem;
 }
-/* 
-.contact__box {
-  justify-content: center;
-  padding-top: 1rem;
-} */
 
 
 .firstLineBox {
@@ -153,11 +138,6 @@ textarea {
 
 /* media queries */
 
-@media screen and (max-width: 1400px) {
-  /* .contact {
-    padding: 0;
-  } */
-}
 
 @media screen and (max-width: 1280px) {
   .contact {

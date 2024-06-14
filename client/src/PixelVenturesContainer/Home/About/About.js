@@ -1,7 +1,6 @@
 import React from "react";
 import profilePhoto from "../../../assets/img/portretkopia.jpg";
 import profilePhotoRound from "../../../assets/img/portretkopiaround.png";
-import { useRef, useEffect, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import './About.css';
 

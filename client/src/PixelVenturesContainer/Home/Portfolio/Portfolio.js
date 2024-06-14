@@ -1,6 +1,5 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { useRef, useEffect, useState } from "react";
 import praesterno from "../../../assets/img/praesterno.png";
 import "./Portfolio.css";
 
@@ -12,9 +11,6 @@ export default function Portfolio() {
     <section  className="portfolio" id="portfolioSection">
       <div className='porfolioWrapper' ref={myRef}>
       <h1 className={`${fadeInSection ? "show" && "portfolioHeader" : ''}`}>portfolio</h1>
-      {/* <div class="btn">
-          <a class="btn__btn portfolio__header btn__btn--white btn__btn--animated" href="#portfolioSection">Discover more</a>
-          </div>  */}
 
       <div className={`${"underlining"} ${fadeInSection ? "show" : ''}`}><span className='dot'></span></div>
       <div className={`${"portfolio__body"} ${fadeInSection ? "show" : ''}`}>

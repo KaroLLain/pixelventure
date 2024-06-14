@@ -1,7 +1,6 @@
 .about {
   grid-column: full-start / full-end;
   display: flex;
-  /* height: 100%; */
   background: linear-gradient(to left, #402e32cc 45%, #402e32cc 55%),
     url("../../../assets/img/stones.jpg");
   background-position: bottom;
@@ -10,7 +9,6 @@
   padding: 30rem 0;
   align-items: center;
   justify-content: center;
-  /* background-color: var(--color-dark-black); */
 }
 
 .aboutPictureWrapper {
