@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const nodemailer = require("nodemailer");
 
-router.post("/contact", (req, res) => {
+router.post(`/contact`, (req, res) => {
   let data = req.body;
   if (
     data.name.length === 0 ||
@@ -13,16 +13,16 @@ router.post("/contact", (req, res) => {
   }
 
   let smtpTransporter = nodemailer.createTransport({
-    service: "Gmail",
+    service: `Gmail`,
     port: 465,
     auth: {
-      user: "karolina.anna.knap@gmail.com",
-      pass: "xtzi dxkh aoyd gvmm",
+      user: `karolina.anna.knap@gmail.com`,
+      pass: `zjgv jwyu tkcn vpvl`,
     },
   });
   let mailOptions = {
     from: data.email,
-    to: "karolina.anna.knap@gmail.com",
+    to: `karolina.anna.knap@gmail.com`,
     subject: `message from ${data.name}`,
     html: `
 
@@ -36,6 +36,7 @@ router.post("/contact", (req, res) => {
             `,
   };
 
+
   smtpTransporter.sendMail(mailOptions, (error) => {
     try {
       if (error)
@@ -47,21 +48,3 @@ router.post("/contact", (req, res) => {
   });
 });
 module.exports = router;
-
-
-export const errorUtils = {
-  getError: (error) => {
-    let e = error;
-    if (error.response) {
-      e = error.response.data;                   // data, status, headers
-      if (error.response.data && error.response.data.error) {
-        e = error.response.data.error;           // my app specific keys override
-      }
-    } else if (error.message) {
-      e = error.message;
-    } else {
-      e = "Unknown error occured";
-    }
-    return e;
-  },
-};
