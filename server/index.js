@@ -11,17 +11,17 @@ app.use(cors());
 
 app.use("/", contactRoute);
 
-// app.use(function(req, res, next) {
-//   res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
-//      next();
-// });
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+     next();
+});
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-//   app.get("*", (req, res) =>
-//     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
-//   );
-// }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+  );
+}
 
 app.use("/", (req, res)=>{
   res.send("Server is running")
