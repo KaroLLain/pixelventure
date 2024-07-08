@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { fallDown as Menu } from "react-burger-menu";
-import logo from "../../../assets/img/logo.png";
+import logo from "../../../assets/img/LogoPV2.png";
 import "./Nav.css";
 
 export default function Nav() {
