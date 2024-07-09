@@ -23,7 +23,7 @@ export default function Portfolio() {
               Fundacja Praesterno
               <div className="technologies--icons cardTechIcons">
                 <svg className="techIcon cardTechIcon">
-                  <use xlinkHref="/sprite.svg#icon-css3"></use>
+                  <use xlinkHref="/sprite.svg#icon-html5"></use>
                 </svg>
                 <svg className="techIcon cardTechIcon">
                   <use xlinkHref="/sprite.svg#icon-sass"></use>
@@ -52,16 +52,16 @@ export default function Portfolio() {
           <img className="cardImg" src={root} alt="" />
           <div className="cardContent">
             <h2 className="cardName">
-              Root Shop
+              Root | Grow With Us
               <div className="technologies--icons cardTechIcons">
+                <svg className="techIcon cardTechIcon">
+                  <use xlinkHref="/sprite.svg#icon-html5"></use>
+                </svg>
                 <svg className="techIcon cardTechIcon">
                   <use xlinkHref="/sprite.svg#icon-css3"></use>
                 </svg>
                 <svg className="techIcon cardTechIcon">
-                  <use xlinkHref="/sprite.svg#icon-sass"></use>
-                </svg>
-                <svg className="techIcon cardTechIcon">
-                  <use xlinkHref="/sprite.svg#icon-javascript"></use>
+                  <use xlinkHref="/sprite.svg#icon-react"></use>
                 </svg>
               </div>
             </h2>
@@ -73,7 +73,7 @@ export default function Portfolio() {
               >
                 <i className="faIcons__item fa fa-github" aria-hidden="true" />
               </a>
-              <a className="cardLink" href="https://praesterno.karolain.pl">
+              <a className="cardLink" href="#a">
                 <i className="faIcons__item fa fa-link" aria-hidden="true" />
               </a>
             </div>
