@@ -33,12 +33,12 @@ export default function Contact() {
   const submitForm = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`https://pixelventure-server-50k7x2ig6-karollains-projects.vercel.app/contact`, {
+      const res = await axios.post('https://pixelventure-server-50k7x2ig6-karollains-projects.vercel.app/contact', {
         name: name,
         email: email,
         subject: subject,
         message: message,
-      });
+        });
       if (name.length === 0 || email.length === 0 || subject.length === 0 || message.length === 0) {
         setBanner(res.data.msg);
         toast.error(res.data.msg);
