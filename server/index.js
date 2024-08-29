@@ -21,24 +21,26 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
+// const path = require('path');
 const contactRoute = require('./contractRoute');
 
 const app = express();
 
 const corsOptions = {
-origin: 'https://www.pixelventure.eu', // Your frontend's origin
-optionsSuccessStatus: 200
-};
+  origin: 'https://www.pixelventure.eu', // Your frontend's origin
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204
+  };
 
-app.use(cors(corsOptions));
-app.use(express.json());
-
-app.use('/', contactRoute);
-
-app.use('/', (req, res) => {
-res.send('Server is running');
-});
+  app.use(cors(corsOptions));
+  app.use(express.json());
+  
+  app.use('/', contactRoute);
+  
+  app.use('/', (req, res) => {
+  res.send('Server is running');
+  });
 
 const port = process.env.PORT || 5000;
 app.listen(port, console.log(`server listening to port ${port}`));
