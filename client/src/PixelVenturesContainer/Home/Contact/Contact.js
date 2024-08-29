@@ -33,7 +33,7 @@ export default function Contact() {
   const submitForm = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`http://127.0.0.1:5000/contact`, {
+      const res = await axios.post(`http://pixelventure-server-50k7x2ig6-karollains-projects.vercel.app/contact`, {
         name: name,
         email: email,
         subject: subject,
