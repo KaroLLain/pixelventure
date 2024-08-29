@@ -1,17 +1,15 @@
 {
     "version": 2,
-    "name": "portfolio", 
     "builds": [
-        {
-            "src": "./server.js",
-            "use": "@vercel/node"
-        }
+     {
+         "src": "./index.js",
+         "use": "@vercel/node"
+     }
     ],
     "routes": [
-        {
-            "src":  "/(.*)",
-            "dest": "/"
-        }
-    ],
-    "buildCommand": "next build"
-}
+     {
+         "src": "/(.*)",
+         "dest": "/"
+     }
+    ]
+ }
