@@ -33,7 +33,7 @@ export default function Contact() {
   const submitForm = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://https://pixelventure-server-dvpzg6l9q-karollains-projects.vercel.app/contact', {
+      const res = await axios.post('https://pixelventure-server-dvpzg6l9q-karollains-projects.vercel.app/contact', {
         name: name,
         email: email,
         subject: subject,
