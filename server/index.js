@@ -32,7 +32,7 @@ const corsOptions = {
   credentials: true,
   optionsSuccessStatus: 204
   };
-
+  
   app.use(cors(corsOptions));
   app.use(express.json());
   
@@ -42,5 +42,13 @@ const corsOptions = {
   res.send('Server is running');
   });
 
-const port = process.env.PORT || 5000;
-app.listen(port, console.log(`server listening to port ${port}`));
+  app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://www.pixelventure.eu');
+    res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    next();
+    });
+  
+  const port = process.env.PORT || 5000;
+  app.listen(port, console.log(`server listening to port ${port}`));
+  app.options('*', cors(corsOptions)); // Enable pre-flight across-the-board
