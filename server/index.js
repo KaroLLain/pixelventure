@@ -21,12 +21,15 @@
 require('dotenv').config();
 const cors = require('cors');
 const express = require('express');
-// const path = require('path');
-const contactRoute = require('./contractRoute');
+const contactRoute = require('./contactRoute');
 
 const app = express();
 
-app.use(cors()); // Allow all origins for testing purposes
+// Configure CORS to allow requests from your client-side domain
+app.use(cors({
+origin: 'https://www.pixelventure.eu'
+}));
+
 app.use(express.json());
 
 app.use('/', contactRoute);
