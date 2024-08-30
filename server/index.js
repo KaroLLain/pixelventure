@@ -27,7 +27,7 @@ const app = express();
 
 // Configure CORS to allow requests from your client-side domain
 app.use(cors({
-origin: 'https://pixelventures-client-karollains-projects.vercel.app'
+origin: 'https://www.pixelventure.eu'
 }));
 
 app.use(express.json());
