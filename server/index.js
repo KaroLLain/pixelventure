@@ -1,6 +1,7 @@
 // require("dotenv").config();
 // const express = require("express");
 // const cors = require("cors");
+
 // const corsOptions ={
 //   origin:'https://www.pixelventure.eu', 
 //   credentials:true,            //access-control-allow-credentials:true
