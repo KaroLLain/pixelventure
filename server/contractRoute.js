@@ -48,29 +48,29 @@
 // });
 // module.exports = router;
 
-const router = require('express').Router()
-const nodemailer = require('nodemailer')
+const router = require("express").Router();
+const nodemailer = require("nodemailer");
 
 router.post('/contact', (req, res) => {
-  let data = req.body
-  if (!data.name || !data.email || !data.subject || !data.message) {
-    return res.status(400).json({ msg: 'Please fill all the fields' })
-  }
+let data = req.body;
+if (!data.name || !data.email || !data.subject || !data.message) {
+return res.status(400).json({ msg: "Please fill all the fields" });
+}
 
-  let smtpTransporter = nodemailer.createTransport({
-    service: 'Gmail',
-    port: 465,
-    auth: {
-      user: process.env.EMAIL_USER, // Use environment variables
-      pass: process.env.EMAIL_PASS // Use environment variables
-    }
-  })
+let smtpTransporter = nodemailer.createTransport({
+service: 'Gmail',
+port: 465,
+auth: {
+user: process.env.EMAIL_USER,
+pass: process.env.EMAIL_PASS,
+},
+});
 
-  let mailOptions = {
-    from: data.email,
-    to: process.env.EMAIL_USER, // Use environment variables
-    subject: `Message from ${data.name}`,
-    html: `
+let mailOptions = {
+from: data.email,
+to: process.env.EMAIL_USER,
+subject: `Message from ${data.name}`,
+html: `
 <h3>Informations</h3>
 <ul>
 <li>Name: ${data.name}</li>
@@ -78,15 +78,16 @@ router.post('/contact', (req, res) => {
 </ul>
 <h3>Message</h3>
 <p>${data.message}</p>
-`
-  }
+`,
+};
 
-  smtpTransporter.sendMail(mailOptions, error => {
-    if (error) {
-      return res.status(500).json({ msg: 'There is a server error' })
-    }
-    res.status(200).json({ msg: 'Thank you for contacting us!' })
-  })
-})
+smtpTransporter.sendMail(mailOptions, (error) => {
+if (error) {
+console.error("Error sending email:", error);
+return res.status(500).json({ msg: "There is a server error" });
+}
+res.status(200).json({ msg: "Thank you for contacting us!" });
+});
+});
 
-module.exports = router
+module.exports = router;
