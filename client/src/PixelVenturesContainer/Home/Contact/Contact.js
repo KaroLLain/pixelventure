@@ -200,7 +200,7 @@ export default function Contact () {
     e.preventDefault()
     try {
       const res = await axios.post(
-        'https://pixelventure-server-karollains-projects.vercel.app//contact',
+        'https://pixelventure-server-karollains-projects.vercel.app/contact',
         {
           name: name,
           email: email,
