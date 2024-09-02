@@ -32,12 +32,12 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const contactRoute = require("./contactRoute"); // Ensure this matches your file name
+const contactRoute = require("./contactRoute");
 
 const corsOptions = {
 origin: 'https://www.pixelventure.eu',
 credentials: true,
-optionSuccessStatus: 200
+optionsSuccessStatus: 200
 };
 
 const app = express();
