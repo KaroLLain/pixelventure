@@ -1,6 +1,6 @@
 {
   "name": "pixelventure",
-  "proxy":"pixelventure-server-byw7e6qe9-karollains-projects.vercel.app/",
+  "proxy":"https://pixelventure-server-karollains-projects.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
