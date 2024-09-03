@@ -61,7 +61,7 @@ export default function Contact () {
     } catch (error) {
       if (error.response) {
         console.log(error.response)
-        setBanner('An error occurred 1: ' + error.response.data.message)
+        setBanner('An error occurred 1: ' + error.response.data.msg)
         toast.error('An error occurred 2: ' + error.response.data.message)
       } else {
         console.log('Error 3', error.message)
