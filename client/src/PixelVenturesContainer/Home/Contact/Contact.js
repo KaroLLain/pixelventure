@@ -59,16 +59,15 @@ export default function Contact () {
         setMessage('')
       }
     } catch (error) {
-      console.log(error.response)
-      // if (error.response) {
-      //   console.log(error.response)
-      //   setBanner('An error occurred: ' + error.response.data.message)
-      //   toast.error('An error occurred: ' + error.response.data.message)
-      // } else {
-      //   console.log('Error', error.message)
-      //   setBanner('An error occurred: ' + error.message)
-      //   toast.error('An error occurred: ' + error.message)
-      // }
+      if (error.response) {
+        console.log(error.response)
+        setBanner('An error occurred: ' + error.response.data.message)
+        toast.error('An error occurred: ' + error.response.data.message)
+      } else {
+        console.log('Error', error.message)
+        setBanner('An error occurred: ' + error.message)
+        toast.error('An error occurred: ' + error.message)
+      }
     }
   }
 

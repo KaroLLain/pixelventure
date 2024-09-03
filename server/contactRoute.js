@@ -31,15 +31,15 @@ router.post('/contact', (req, res) => {
 `
   }
 
-  smtpTransporter.sendMail(mailOptions, error => {
+  smtpTransporter.sendMail(mailOptions, (error) => {
     try {
       if (error)
-        return res.status(400).json({ msg: 'Please fill all the fields' })
-      res.status(200).json({ msg: 'Thank you for contact!' })
+        return res.status(400).json({ msg: "Please fill all the fields" });
+      res.status(200).json({ msg: "Thank you for contact!" });
     } catch (error) {
-      if (error) return res.status(500).json({ msg: 'There is server error' })
+      if (error) return res.status(500).json({ msg: "There is server error" });
     }
-  })
-})
+  });
+});
 
 module.exports = router
