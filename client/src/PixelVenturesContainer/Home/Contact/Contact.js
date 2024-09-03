@@ -61,12 +61,12 @@ export default function Contact () {
     } catch (error) {
       if (error.response) {
         console.log(error.response.msg)
-        setBanner('An error occurred: ' + error.response.data.message)
-        toast.error('An error occurred: ' + error.response.data.message)
+        setBanner('An error occurred: ' + error.response.data.msg)
+        toast.error('An error occurred: ' + error.response.data.msg))
       } else {
-        console.log('Error', error.message)
-        setBanner('An error occurred: ' + error.message)
-        toast.error('An error occurred: ' + error.message)
+        console.log('Error', error.msg))
+        setBanner('An error occurred: ' + error.msg))
+        toast.error('An error occurred: ' + error.msg))
       }
     }
   }
