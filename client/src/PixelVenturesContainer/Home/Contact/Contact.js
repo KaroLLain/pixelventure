@@ -60,7 +60,7 @@ export default function Contact () {
       }
     } catch (error) {
       if (error.response) {
-        console.log(error.response)
+        console.log(error.response.msg)
         setBanner('An error occurred: ' + error.response.data.message)
         toast.error('An error occurred: ' + error.response.data.message)
       } else {
