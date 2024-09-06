@@ -69,7 +69,7 @@ export default function Portfolio() {
             <div className="faIcons">
               <a
                 className="cardLink"
-                href="https://github.com/KaroLLain/root-ecommerce"
+                href="https://github.com/KaroLLain/root-shop"
               >
                 <i className="faIcons__item fa fa-github" aria-hidden="true" />
               </a>
