@@ -2,6 +2,7 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import praesterno from "../../../assets/img/praesterno.png";
 import root from "../../../assets/img/root.jpg"
+import memory from "../../../assets/img/memory.jpg"
 import "./Portfolio.css";
 
 export default function Portfolio() {
@@ -80,7 +81,39 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="card cardEmpty">
+        <div className="card">
+          <img className="cardImg" src={memory} alt="" />
+          <div className="cardContent">
+            <h2 className="cardName">
+              Memory Game
+              <div className="technologies--icons cardTechIcons">
+                <svg className="techIcon cardTechIcon">
+                  <use xlinkHref="/sprite.svg#icon-react"></use>
+                </svg>
+                <svg className="techIcon cardTechIcon">
+                  <use xlinkHref="/sprite.svg#icon-typescript"></use>
+                </svg>
+                <svg className="techIcon cardTechIcon">
+                  <use xlinkHref="/sprite.svg#icon-vite"></use>
+                </svg>
+              </div>
+            </h2>
+
+            <div className="faIcons">
+              <a
+                className="cardLink"
+                href="https://github.com/KaroLLain/memory"
+              >
+                <i className="faIcons__item fa fa-github" aria-hidden="true" />
+              </a>
+              <a className="cardLink" href="https://memory-wine.vercel.app/">
+                <i className="faIcons__item fa fa-link" aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="card cardEmpty">
           <div className="cardContent">
             <h2 className="cardNameEmpty">
               In the making
@@ -109,7 +142,7 @@ export default function Portfolio() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       </div>
     </section>
