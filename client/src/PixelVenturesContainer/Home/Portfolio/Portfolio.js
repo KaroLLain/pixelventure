@@ -85,7 +85,7 @@ export default function Portfolio() {
           <img className="cardImg" src={memory} alt="" />
           <div className="cardContent">
             <h2 className="cardName">
-              Memory Game
+              Memory | Game Time
               <div className="technologies--icons cardTechIcons">
                 <svg className="techIcon cardTechIcon">
                   <use xlinkHref="/sprite.svg#icon-react"></use>
@@ -113,6 +113,8 @@ export default function Portfolio() {
             </div>
           </div>
         </div>
+
+        
 
         {/* <div className="card cardEmpty">
           <div className="cardContent">
