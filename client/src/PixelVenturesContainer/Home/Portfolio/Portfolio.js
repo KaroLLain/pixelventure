@@ -74,9 +74,9 @@ export default function Portfolio() {
               >
                 <i className="faIcons__item fa fa-github" aria-hidden="true" />
               </a>
-              {/* <a className="cardLink" href="#a">
+              <a className="cardLink" href="https://root-e449364d01c7.herokuapp.com/#/">
                 <i className="faIcons__item fa fa-link" aria-hidden="true" />
-              </a> */}
+              </a>
             </div>
           </div>
         </div>
