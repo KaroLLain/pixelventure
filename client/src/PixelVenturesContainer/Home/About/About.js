@@ -36,12 +36,12 @@ export default function About () {
         </p>
 
         <div className='linksWrapper'>
-          <div className='svgWrapper'>
+          {/* <div className='svgWrapper'>
             <svg height='40' width='150'>
               <rect className='shape' height='40' width='150' />
             </svg>
             <div className='text'>About me</div>
-          </div>
+          </div> */}
 
           <div className='faWrapper'>
             <a className='faWrapperItem' href='https://github.com/KaroLLain'>
