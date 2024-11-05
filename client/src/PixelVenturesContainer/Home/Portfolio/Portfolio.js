@@ -42,7 +42,7 @@ export default function Portfolio() {
               >
                 <i className="faIcons__item fa fa-github" aria-hidden="true" />
               </a>
-              <a className="cardLink" href="https://praesterno.karolain.pl">
+              <a className="cardLink" href="https://praesterno.pixelventure.eu">
                 <i className="faIcons__item fa fa-link" aria-hidden="true" />
               </a>
             </div>
